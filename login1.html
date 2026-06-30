@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+
+    <input type="password" name="" id="pass" placeholder="Enter password"><br>
+    <br>
+    <Button onclick="getdata()">Login</Button>
+    <h2 id ="msg"></h2>
+
+    <script>
+         var attempt=3;
+        function getdata()
+        {
+
+        
+       
+        var msg=document.getElementById("msg");
+        var pass=document.getElementById("pass");
+
+        if(pass.value=="admin@123")
+    {
+        msg.innerHTML="Login successfully";
+    }
+    else
+    {
+        attempt--;
+
+        if(attempt>0)
+    {
+        msg.innerHTML="Wrong password! attempt left="+attempt;
+    }
+    else
+    {
+        msg.innerHTML="Account lock no attempt left...";
+
+        document.getElementById("pass").disabled=true;
+
+    }
+    }
+}
+    </script>
+</body>
+</html>

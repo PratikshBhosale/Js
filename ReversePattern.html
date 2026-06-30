@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Star Pattern</title>
+</head>
+<body>
+
+<pre id="output"></pre>
+
+<script>
+    var ptr = "";
+
+    for (let i = 4; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+            ptr += "*";
+        }
+        ptr += "\n";
+    }
+
+    document.getElementById("output").innerText = ptr;
+</script>
+
+</body>
+</html>

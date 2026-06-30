@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>..Bank ATM..</h1>
+    <script>
+        var balance=10000
+        var a;
+        var ch=Number(prompt("...Operations...\n1.Check Balance\n2.Withdraw\n3.Deposit\n4.Exit"))
+        switch(ch)
+        {
+            case 1:console.log("Balance Is:",balance);
+             document.write("\nBalance",balance);break;
+            case 2:a=Number(prompt("Enter The Amount"));
+            console.log("Balance:",balance);
+            console.log("We Withdraw:",a);
+            console.log("Balance After Withdraw:",balance-a);
+            document.write("Balance",balance);
+            document.write("\nWe Withdraw",a);
+             document.write("\nAfter Withdraw Balance",balance-a);break;
+            case 3:a=Number(prompt("Enter The Amount"));
+            console.log("Balance:",balance);
+              document.write("Balance",balance);
+            document.write("\nWe Deposit",a)
+            console.log("We Deposit:",a);
+            console.log("Balance After Deposit:",balance-a);
+              document.write("\nAfter deposit Balance",balance+a);break;
+            case 4:console.log("Exit From ATM");break;
+            default:console.log("Wrong Choice")
+        }
+    </script>
+</body>
+</html>

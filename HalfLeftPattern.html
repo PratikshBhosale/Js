@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Left Half Pyramid</title>
+</head>
+<body>
+<pre id="output"></pre>
+
+<script>
+var ptr = "";
+var n = 6;
+
+for (let i = 1; i <= n; i++) {
+
+    // Spaces
+    for (let j = 1; j <= n - i; j++) {
+        ptr += " ";
+    }
+
+    // Stars
+    for (let j = 1; j <= i; j++) {
+        ptr += "*";
+    }
+
+    ptr += "\n";
+}
+
+document.getElementById("output").innerText = ptr;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Menu Using Switch</title>
+</head>
+<body>
+    <h1>...Food Menu...</h1>
+
+    <script>
+        var choice = Number(prompt(
+            "Food Menu\n" +"1. Pizza\n" + "2. Burger\n" + "3. Sandwich\n" + "4. Pasta\n" + "5. Ice Cream\n" +
+            "Enter Your Choice (1-5)"
+        ));
+
+        switch(choice)
+        {
+            case 1:  document.write("You selected Pizza");    break;
+
+            case 2:  document.write("You selected Burger");   break;
+
+            case 3:  document.write("You selected Sandwich"); break;
+
+            case 4:  document.write("You selected Pasta");    break;
+
+            case 5:  document.write("You selected Ice Cream"); break;
+
+            default: document.write("Invalid Choice");
+        }
+    </script>
+</body>
+</html>

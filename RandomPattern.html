@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern</title>
+</head>
+<body>
+<pre id="output"></pre>
+
+<script>
+var ptr = "";
+var n = 11;
+
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+
+        if (
+            i == 1 || i == n ||          
+            i == 6 ||                    
+            i == j ||                    
+            i + j == n + 1               
+        ) {
+            ptr += "* ";
+        } else {
+            ptr += "  ";
+        }
+    }
+    ptr += "\n";
+}
+
+document.getElementById("output").innerText = ptr;
+</script>
+
+</body>
+</html>

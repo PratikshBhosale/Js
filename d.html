@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>...Discount...</h1>
+    <script>
+        var price=Number(prompt("Enter Your Price"));
+        var d;
+        var bill;
+        if(price>=5000)
+    {
+        console.log("Discount Is 20%")
+        d=(price*20)/100;
+        bill=price-d;
+        console.log("Discount",d)
+        console.log("Total",bill)
+        document.write("Total Bill:",bill)
+    }
+    else if(price>=3000)
+    {
+        console.log("Discount Is 10%")
+          d=(price*10)/100;
+        bill=price-d;
+         console.log("Discount",d)
+           console.log("Total",bill)
+        document.write("Total Bill:",bill)
+    }
+    else if(price>=1000)
+    {
+        console.log("Discount Is 5%")
+          d=(price*5)/100;
+        bill=price-d;
+         console.log("Discount",d)
+           console.log("Total",bill)
+        document.write("Total Bill:",bill)
+    }
+    else
+    {
+        console.log("No Discount")
+    }
+    </script>
+</body>
+</html>

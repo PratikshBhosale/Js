@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hollow Hourglass Pattern</title>
+</head>
+<body>
+<pre id="output"></pre>
+
+<script>
+var ptr = "";
+var n = 6;
+
+
+for (let i = n; i >= 1; i--) {
+
+    
+    for (let j = 1; j <= n - i; j++) {
+        ptr += " ";
+    }
+
+
+    for (let j = 1; j <= (2 * i - 1); j++) {
+        if (i == n || j == 1 || j == (2 * i - 1)) {
+            ptr += "*";
+        } else {
+            ptr += " ";
+        }
+    }
+
+    ptr += "\n";
+}
+
+
+for (let i = 2; i <= n; i++) {
+
+    
+    for (let j = 1; j <= n - i; j++) {
+        ptr += " ";
+    }
+
+    
+    for (let j = 1; j <= (2 * i - 1); j++) {
+        if (i == n || j == 1 || j == (2 * i - 1)) {
+            ptr += "*";
+        } else {
+            ptr += " ";
+        }
+    }
+
+    ptr += "\n";
+}
+
+document.getElementById("output").innerText = ptr;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <h1>Factorial Of Number</h1>
+
+    <script>
+        let n = Number(prompt("Enter Your Number"));
+        let fact = 1;
+
+        for(let i = 1; i <= n; i++)
+        {
+            fact = fact * i;
+        }
+
+        document.write("Factorial = " + fact);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1" onmouseover="redLight()" ></div>
+    <div class="box" id="box2" onmouseover="orangeLight()" ></div>
+    <div class="box" id="box3" onmouseover="greenLight()"></div>
+
+    <script>
+        let box1=document.getElementById("box1");
+        let box2=document.getElementById("box2");
+        let box3=document.getElementById("box3");
+
+        function redLight(){
+            box1.style.backgroundColor="red"
+            box2.style.backgroundColor="white"
+            box3.style.backgroundColor="white"
+        }
+
+         function orangeLight(){
+            box1.style.backgroundColor="white"
+            box2.style.backgroundColor="orange"
+            box3.style.backgroundColor="white"
+        }
+
+         function greenLight(){
+            box1.style.backgroundColor="white"
+            box2.style.backgroundColor="white"
+            box3.style.backgroundColor="green"
+        }
+    </script>
+</body>
+</html>

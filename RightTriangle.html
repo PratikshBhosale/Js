@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Right Triangle Pattern</title>
+</head>
+<body>
+<pre id="output"></pre>
+
+<script>
+var ptr = "";
+var n = 4;
+
+
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+        ptr += "* ";
+    }
+    ptr += "\n";
+}
+
+
+for (let i = n - 1; i >= 1; i--) {
+    for (let j = 1; j <= i; j++) {
+        ptr += "* ";
+    }
+    ptr += "\n";
+}
+
+document.getElementById("output").innerText = ptr;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Electricity bill</h1>
+    <script>
+        var unit=Number(prompt("Enter unit"))
+        var bill;
+
+        if(unit<=100)
+        {
+            console.log("bill:",bill=unit*2)
+        }
+        else if(unit<=200)
+        {
+            console.log("bill:",bill=(100*2)+((unit-100)*3));
+        }
+        else
+        {
+            console.log("bill:",bill=((100*2)+(100*3)+((unit-200)*5)));
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+       
+    body
+    {
+        margin: 0%;
+        height: auto;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        background-color: pink;
+        }
+
+        .card
+        {
+            height: 300px;
+            width: 350px;
+            justify-content: center;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input{
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+
+            background-color: blue;
+            color: white;
+
+            border: none;
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Login Form</h1>
+         <input type="text" name="" id="user" placeholder="Enter The User Name">
+         <input type="password" name="" id="pass" placeholder="Enter The Password">
+
+         <br><br>
+         <button onclick="getClick()">LOGIN</button>
+    </div>
+    <script>
+
+        let user=document.getElementById("user");
+        let pass=document.getElementById("pass");
+        let username="admin";
+        let password="admin@123";
+
+        function getClick(){
+            if(username==user.value && password==pass.value)
+        {
+            alert("Login Successfully")
+        }
+        else
+        {
+               alert(" Incorrect Password");
+
+                let em = prompt("Enter Email/Phone Number");
+                
+                let otp = Math.floor( Math.random() * 10000);
+
+                alert("Your OTP is : " + otp);
+
+                setTimeout(() => {
+                                     otp = null;
+                                         alert("OTP Expired");
+                                  }, 60000);
+
+        let op = prompt("Enter OTP");
+
+        if (otp==null) {
+                         alert("OTP Expired");
+                        }
+        else if (op == otp) 
+        {
+            alert("OTP Verified Successfully");
+        }
+        else    
+        {
+            alert("OTP Verification Unsuccessful");
+        }
+    }
+ }
+
+    </script>
+    
+</body>
+</html>

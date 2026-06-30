@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+
+    <style>
+        #container{
+            display:flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            height:350px;
+            width:250px;
+            border:1px solid black;
+            text-align:center;
+            margin:10px;
+            padding:10px;
+        }
+
+        .card img{
+            width:200px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product List</h1>
+    <button onclick="getProduct()">Show Products</button>
+
+    <div id="container"></div>
+
+    <script>
+
+        let card = document.getElementById("container");
+
+        let products = [
+        {
+            pname:"Watch",
+            cname:"Titan",
+            price:4000,
+            img:"i1.jpg"
+        },
+        {
+            pname:"Mobile",
+            cname:"Samsung",
+            price:40000,
+            img:"i2.jpg"
+        },
+        {
+            pname:"Laptop",
+            cname:"Dell",
+            price:50000,
+            img:"i3.jpg"
+        },
+        {
+            pname:"Headphone",
+            cname:"Noise",
+            price:2000,
+            img:"i4.jpg"
+        }
+        ];
+
+        function getProduct(){
+
+            card.innerHTML = "";
+
+            products.forEach((val) => {
+
+                card.innerHTML += `
+                <div class="card">
+                    <img src="${val.img}" alt="">
+                    <h2>Product Name: ${val.pname}</h2>
+                    <h3>Company: ${val.cname}</h3>
+                    <h3>Price: ₹${val.price}</h3>
+                </div>
+                `;
+            });
+        }
+
+    </script>
+
+</body>
+</html>

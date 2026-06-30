@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Information</h1>
+    <input type="text" name="" id="user" placeholder="Enter employee username:">
+    <br><br>
+    <input type="number" name="" id="Id" placeholder="Enter employee Id:">
+    <br><br>
+    <input type="number" name="" id="time" placeholder="Enter coming time in office:">
+    <button onclick="getdata()">Sumbit</button>
+    <h1 id="msg"></h1>
+     <h1 id="msg1"></h1>
+
+    <script>
+        function getdata()
+        {
+
+
+        var msg=document.getElementById("msg");
+         var msg1=document.getElementById("msg1");
+        var e_name=document.getElementById("user");
+        var e_id=document.getElementById("Id");
+        var time=parseInt(document.getElementById("time").value);
+    
+
+         if(time>=5&&time<12)
+         {
+             msg.innerHTML="Hello "+  e_name.value +"  Good Morning";
+         }
+         else if(time>=12&&time<17)
+         {
+            msg.innerHTML="Hello "+  e_name.value +" Good Afternoon";
+         }
+         else if(time>=17&&time<21)
+         {
+            msg.innerHTML="Hello "+  e_name.value +" Good Evening";
+         }
+         else 
+         {
+            msg.innerHTML="Hello "+  e_name.value +"Good Night";
+         }
+
+
+        msg1.innerHTML="Emp_Id= "+  e_id.value + "<br>" + "Emp-Name:"+e_name.value + "<br>" + "Time="+time;
+
+        }
+
+    </script>
+</body>
+</html>
